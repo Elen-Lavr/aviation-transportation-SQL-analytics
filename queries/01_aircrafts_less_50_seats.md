@@ -3,9 +3,9 @@
 
 ### :paperclip: SQL-запрос
 ```sql
-SELECT aircraft_name 
-FROM aircrafts 
-WHERE total_seats < 50;
+select aircraft_name 
+from aircrafts 
+where total_seats < 50;
 ```
 ### :heavy_check_mark: Результат выполнения
 ```csv
