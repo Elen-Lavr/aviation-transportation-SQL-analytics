@@ -11,7 +11,7 @@ _:toolbox:  Используемые технологии:_
   * Язык: SQL (ориентирован на PostgreSQL);
   * Ключевые концепции: оконные функции, агрегация данных, работа с подзапросами, функции для работы с датами и строками.
 
-_:books: Исходные данные_ [Авиаперевозки](https://github.com/Elen-Lavr/Elen-Lavr-Aviation-Transportation-SQL-Analytics/blob/main/avia.backup). Описание базы данных [/data](./data/) 
+_:books: Исходные данные_ [Авиаперевозки](https://github.com/Elen-Lavr/Elen-Lavr-Aviation-Transportation-SQL-Analytics/blob/main/avia.backup). Описание базы данных [/data](./data/bookings.pdf) 
 
 _:memo: SQL запросы с решениями и результатами:_
 
