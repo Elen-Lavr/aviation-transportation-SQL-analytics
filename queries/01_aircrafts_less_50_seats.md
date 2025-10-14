@@ -1,16 +1,18 @@
 ### :exclamation: Задача 1
+```txt
 Выведите название самолетов, которые имеют менее 50 посадочных мест.
-
+```
 ### :paperclip: SQL-запрос
 ```sql
-select aircraft_name 
-from aircrafts 
-where total_seats < 50;
+select a.model, count(s.seat_no)
+from aircrafts a
+join seats s on a.aircraft_code = s.aircraft_code
+group by model
+having count(s.seat_no) < 50;
 ```
 ### :heavy_check_mark: Результат выполнения
 ```csv
-aircraft_name
-Cessna 172
-ATR 42
-Bombardier CRJ200
+model             |count|
+------------------+-----+
+Cessna 208 Caravan|   12|
 ```
