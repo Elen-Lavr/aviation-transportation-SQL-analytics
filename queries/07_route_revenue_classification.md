@@ -1,11 +1,11 @@
 ### :exclamation: Задача 7
+```txt
 Классифицируйте финансовые обороты (сумма стоимости перелетов) по маршрутам:
  - до 50 млн - low;
  - от 50 млн включительно до 150 млн - middle;
  - от 150 млн включительно - high.
-   
 Выведите в результат количество маршрутов в каждом полученном классе.
-
+```
 ### :paperclip: SQL-запрос
 ```sql
 select a.сlassification, count (*) as number_of_routesn		
@@ -19,14 +19,15 @@ from (
 		end сlassification
 		from ticket_flights tf
 		join flights f on f.flight_id = tf.flight_id
-		group by departure_airport, arrival_airport--457 строк
+		group by departure_airport, arrival_airport
 		) a
 group by a.сlassification;
 ```
 ### :heavy_check_mark: Результат выполнения
-```csv
-aircraft_name
-Cessna 172
-ATR 42
-Bombardier CRJ200
-```
+
+сlassification|number_of_routesn|
+--------------|-----------------|
+high          |               25|
+low           |              355|
+middle        |               77|
+
