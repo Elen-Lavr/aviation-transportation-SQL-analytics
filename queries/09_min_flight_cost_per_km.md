@@ -1,22 +1,24 @@
 ### :exclamation: Задача 9
+```txt
 Найдите значение минимальной стоимости полета 1 км для пассажиров.
-
 То есть нужно найти расстояние между аэропортами и с учетом стоимости перелетов получить искомый результат.
-
 Для поиска расстояния между двумя точками на поверхности Земли используется модуль earthdistance.
-
+```
 ### :paperclip: SQL-запрос
 ```sql
+create extension cube
+ 
+create extension earthdistance 
+ 
 select min (tf.amount / round((point(a.longitude, a.latitude) <@> point(b.longitude, b.latitude)) * 1.609344))
 from flights f
 join airports a on a.airport_code = f.departure_airport
 join airports b on b.airport_code = f.arrival_airport
-join ticket_flights tf on tf.flight_id=f.flight_id;
+join ticket_flights tf on tf.flight_id=f.flight_id
 ```
 ### :heavy_check_mark: Результат выполнения
-```csv
-aircraft_name
-Cessna 172
-ATR 42
-Bombardier CRJ200
-```
+
+|min              |
+|-----------------|
+|9.868421052631579|
+
