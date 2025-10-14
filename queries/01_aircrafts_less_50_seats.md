@@ -4,7 +4,7 @@
 ```
 ### :paperclip: SQL-запрос
 ```sql
-select a.model, count(s.seat_no)
+select a.model
 from aircrafts a
 join seats s on a.aircraft_code = s.aircraft_code
 group by model
@@ -12,7 +12,7 @@ having count(s.seat_no) < 50;
 ```
 ### :heavy_check_mark: Результат выполнения
 
-model             |count|
-------------------|-----|
-Cessna 208 Caravan|   12|
+|model             |
+|------------------|
+|Cessna 208 Caravan|
 
