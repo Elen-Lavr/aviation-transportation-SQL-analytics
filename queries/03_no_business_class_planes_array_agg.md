@@ -12,9 +12,8 @@ group by a.model
 having not array_agg(s.fare_conditions) @> array['Business'::varchar];
 ```
 ### :heavy_check_mark: Результат выполнения
-```csv
-model             |
-------------------+
-Bombardier CRJ-200|
-Cessna 208 Caravan|
-```
+
+|model             |
+|------------------|
+|Bombardier CRJ-200|
+|Cessna 208 Caravan|
