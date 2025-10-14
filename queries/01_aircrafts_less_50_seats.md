@@ -11,8 +11,8 @@ group by model
 having count(s.seat_no) < 50;
 ```
 ### :heavy_check_mark: Результат выполнения
-```csv
+
 model             |count|
-------------------+-----+
+------------------|-----|
 Cessna 208 Caravan|   12|
-```
+
