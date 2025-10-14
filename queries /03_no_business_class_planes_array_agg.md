@@ -11,8 +11,8 @@ having not array_agg(s.fare_conditions) @> array['Business'::varchar];
 ```
 ### :heavy_check_mark: Результат выполнения
 ```csv
-aircraft_name
-Cessna 172
-ATR 42
-Bombardier CRJ200
+model             |
+------------------+
+Bombardier CRJ-200|
+Cessna 208 Caravan|
 ```
