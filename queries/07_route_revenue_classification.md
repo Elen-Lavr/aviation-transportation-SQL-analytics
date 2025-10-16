@@ -10,8 +10,7 @@
 ```sql
 select a.сlassification, count (*) as number_of_routesn		
 from (
-		select 
-		departure_airport, arrival_airport, sum (amount),
+		select departure_airport, arrival_airport, sum (amount),
 		case
 			when sum (amount) < 50000000 then 'low'
 			when sum (amount) >= 50000000 and sum (amount) < 150000000 then 'middle'
