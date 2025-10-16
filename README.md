@@ -1,4 +1,4 @@
-# Elen-Lavr-Aviation-Transportation-SQL-Analytics
+# aviation-transportation-SQL-analytics
 
 _:airplane:  Этот репозиторий содержит решения практических кейсов по анализу данных в сфере авиаперевозок:_
   * Анализ воздушного флота: фильтрация и агрегация данных о самолетах;
